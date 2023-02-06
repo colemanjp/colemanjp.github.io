@@ -1,0 +1,18 @@
+project:
+  type: website
+
+website:
+  title: "Home"
+  navbar:
+    background: black
+    foreground: white
+    right:
+      - icon: github
+        href: https://github.com/colemanjp/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/johnpcoleman1/
+format:
+  html:
+    theme: journal
+    css: styles.css
+    toc: true
