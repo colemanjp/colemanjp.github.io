@@ -1,9 +1,79 @@
 [
   {
+    "objectID": "posts/rstudio_shiny_server_directory_traversal/index.html",
+    "href": "posts/rstudio_shiny_server_directory_traversal/index.html",
+    "title": "CVE-2021-3374 Rstudio Shiny-Server Directory Traversal and Source Code Leak",
+    "section": "",
+    "text": "https://github.com/colemanjp/rstudio-shiny-server-directory-traversal-source-code-leak"
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html",
+    "href": "posts/signal_on_tails/index.html",
+    "title": "Install Signal on Tails",
+    "section": "",
+    "text": "Install and configure Signal with persistence on Tails"
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html#create-directories-for-persistence",
+    "href": "posts/signal_on_tails/index.html#create-directories-for-persistence",
+    "title": "Install Signal on Tails",
+    "section": "Create Directories for Persistence",
+    "text": "Create Directories for Persistence\nsudo mkdir -m 755 /live/persistence/TailsData_unlocked/sources.list.d\nsudo mkdir -m 755 /live/persistence/TailsData_unlocked/keyrings\nsudo mkdir -m 755 /live/persistence/TailsData_unlocked/Signal\nsudo chown amnesia:amnesia /live/persistence/TailsData_unlocked/Signal\nsudo mkdir -m755 -p /live/persistence/TailsData_unlocked/dotfiles/.local/share/applications\ncd /live/persistence/TailsData_unlocked/dotfiles/\nsudo chown -Rh amnesia:amnesia .local"
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html#add-persistence-directories-to-persistence.conf",
+    "href": "posts/signal_on_tails/index.html#add-persistence-directories-to-persistence.conf",
+    "title": "Install Signal on Tails",
+    "section": "Add Persistence Directories to Persistence.conf",
+    "text": "Add Persistence Directories to Persistence.conf\nsudo bash -c \"echo '/etc/apt/sources.list.d  source=sources.list.d,link' >> /live/persistence/TailsData_unlocked/persistence.conf\"\nsudo bash -c \"echo '/usr/share/keyrings/persistent source=keyrings' >> /live/persistence/TailsData_unlocked/persistence.conf\"\nsudo bash -c \"echo '/home/amnesia/.config/Signal source=Signal' >> /live/persistence/TailsData_unlocked/persistence.conf\""
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html#download-and-install-signal-gpg-keyring",
+    "href": "posts/signal_on_tails/index.html#download-and-install-signal-gpg-keyring",
+    "title": "Install Signal on Tails",
+    "section": "Download and Install Signal GPG Keyring",
+    "text": "Download and Install Signal GPG Keyring\ncd $HOME\ntorify wget https://updates.signal.org/desktop/apt/keys.asc -O- | gpg --dearmor > signal-desktop-keyring.gpg\nsudo cp signal-desktop-keyring.gpg /live/persistence/TailsData_unlocked/keyrings\nsudo bash -c \"echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/persistent/signal-desktop-keyring.gpg] tor+https://updates.signal.org/desktop/apt xenial main' > /live/persistence/TailsData_unlocked/sources.list.d/signal.list\""
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html#install-custom-signal-startup-script",
+    "href": "posts/signal_on_tails/index.html#install-custom-signal-startup-script",
+    "title": "Install Signal on Tails",
+    "section": "Install Custom Signal Startup Script",
+    "text": "Install Custom Signal Startup Script\nThis script sets environment variables needed run Signal on Tails\ncat >$HOME/Persistent/signal.sh<<EOF\n#!/bin/sh\nexport HTTP_PROXY=socks://127.0.0.1:9050\nexport HTTPS_PROXY=socks://127.0.0.1:9050\nsignal-desktop\nEOF\nchmod 755 $HOME/Persistent/signal.sh"
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html#create-desktop-script-for-signal",
+    "href": "posts/signal_on_tails/index.html#create-desktop-script-for-signal",
+    "title": "Install Signal on Tails",
+    "section": "Create Desktop Script for Signal",
+    "text": "Create Desktop Script for Signal\nThis creates an icon for the custom signal.sh script. When you run Signal, pick the generic diamond Signal icon rather than the built in one.\ncat >/live/persistence/TailsData_unlocked/dotfiles/.local/share/applications/Signal.desktop<<EOF\n[Desktop Entry]\nName=Signal\nGenericName=Signal Desktop Messenger\nExec=/home/amnesia/Persistent/signal.sh\nTerminal=false\nType=Application\nEOF"
+  },
+  {
+    "objectID": "posts/signal_on_tails/index.html#reboot-and-install-signal-desktop-package",
+    "href": "posts/signal_on_tails/index.html#reboot-and-install-signal-desktop-package",
+    "title": "Install Signal on Tails",
+    "section": "Reboot and Install signal-desktop Package",
+    "text": "Reboot and Install signal-desktop Package\nsudo reboot\nsudo apt get update\nsudo apt install signal-desktop\nClick “Install Every Time” when prompted. This creates an entry in /live/persistence/TailsData_unlocked/live-additional-software.conf"
+  },
+  {
+    "objectID": "posts/tmux_cron/index.html",
+    "href": "posts/tmux_cron/index.html",
+    "title": "Run Command in Tmux from Cron",
+    "section": "",
+    "text": "Application run from cron needs a tty\nOne way to accomplish that is to run it inside tmux.\n\nWrapper Script Manages tmux and Launches Command\nRun the command script01.sh inside tmux. Create a separate tmux session for script01.sh to make this easy.\n#!/bin/sh\n\n# Script that is run in tmux\nSCRIPT=\"${HOME}/script01.sh\"\n\n# Name the tmux session\nSESSION=script01\n\n# If session doesn't exist, create it\nif /usr/bin/tmux has -t \"${SESSION}\" 2>/dev/null\nthen\n        :\nelse\n        /usr/bin/tmux new-session -d -s \"${SESSION}\"\nfi\n\n# Run SCRIPT in the tmux SESSION\n/usr/bin/tmux send-keys -t \"${SESSION}\":0 \"${SCRIPT}\" ENTER\n\n\nLaunch the Wrapper Script from cron\n15 10 * * * \"${HOME}\"/wrapper.sh > /dev/null"
+  },
+  {
+    "objectID": "posts/xxe_vulnerability_in_bluecat_drp/index.html",
+    "href": "posts/xxe_vulnerability_in_bluecat_drp/index.html",
+    "title": "CVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)",
+    "section": "",
+    "text": "https://github.com/colemanjp/XXE-Vulnerability-in-Bluecat-Device-Registration-Portal-DRP"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "No matching items"
+    "text": "Run Command in Tmux from Cron\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nFeb 2, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nCVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)\n\n\n\n\n\n\n\nCVE\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nInstall Signal on Tails\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nJan 9, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nCVE-2021-3374 Rstudio Shiny-Server Directory Traversal and Source Code Leak\n\n\n\n\n\n\n\nCVE\n\n\n\n\n\n\n\n\n\n\n\nJan 30, 2021\n\n\nJohn Coleman\n\n\n\n\n\n\nNo matching items"
   }
 ]
