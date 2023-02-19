@@ -2,22 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://colemanjp.github.io/posts/rstudio_shiny_server_directory_traversal/index.html</loc>
-    <lastmod>2023-02-06T03:47:05.570Z</lastmod>
+    <lastmod>2023-02-19T20:03:49.833Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/signal_on_tails/index.html</loc>
-    <lastmod>2023-02-06T03:47:05.837Z</lastmod>
+    <lastmod>2023-02-19T20:03:50.100Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/tmux_cron/index.html</loc>
-    <lastmod>2023-02-06T03:47:06.073Z</lastmod>
+    <lastmod>2023-02-19T20:03:50.350Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/xxe_vulnerability_in_bluecat_drp/index.html</loc>
-    <lastmod>2023-02-06T03:47:06.308Z</lastmod>
+    <lastmod>2023-02-19T20:03:50.591Z</lastmod>
+  </url>
+  <url>
+    <loc>https://colemanjp.github.io/posts/hdparm_erase/index.html</loc>
+    <lastmod>2023-02-19T20:03:50.832Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/index.html</loc>
-    <lastmod>2023-02-06T03:47:06.587Z</lastmod>
+    <lastmod>2023-02-19T20:03:51.116Z</lastmod>
   </url>
 </urlset>
