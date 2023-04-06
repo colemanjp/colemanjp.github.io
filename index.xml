@@ -10,54 +10,7 @@
 <atom:link href="https://colemanjp.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.313</generator>
-<lastBuildDate>Wed, 05 Apr 2023 04:00:00 GMT</lastBuildDate>
-<item>
-  <title>Map Caps Lock to Ctrl</title>
-  <dc:creator>John Coleman</dc:creator>
-  <link>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<section id="map-caps-lock-to-ctrl" class="level1">
-<h1>Map Caps Lock to Ctrl</h1>
-<section id="gnome-tweak-tool" class="level2">
-<h2 class="anchored" data-anchor-id="gnome-tweak-tool">Gnome Tweak Tool</h2>
-<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/tweak.png" class="img-fluid" width="800"></p>
-</section>
-<section id="gnome-dconf-editor" class="level2">
-<h2 class="anchored" data-anchor-id="gnome-dconf-editor">Gnome dconf-editor</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/dconf.png" class="img-fluid figure-img" width="800"></p>
-<p></p><figcaption class="figure-caption">dconf-editor</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="xfce" class="level2">
-<h2 class="anchored" data-anchor-id="xfce">Xfce</h2>
-<p>Foo foo foo</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/xfce.png" class="img-fluid figure-img" width="800"></p>
-<p></p><figcaption class="figure-caption">xfce</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="pass-keyboard-mapping-to-rdp-in-remmina" class="level2">
-<h2 class="anchored" data-anchor-id="pass-keyboard-mapping-to-rdp-in-remmina">Pass Keyboard Mapping to RDP in Remmina</h2>
-
-
-</section>
-</section>
-
- ]]></description>
-  <category>HowTo</category>
-  <guid>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</guid>
-  <pubDate>Wed, 05 Apr 2023 04:00:00 GMT</pubDate>
-  <media:content url="https://colemanjp.github.io/posts/ctrl_nocaps/tweak.png" medium="image" type="image/png" height="101" width="144"/>
-</item>
+<lastBuildDate>Sun, 19 Feb 2023 05:00:00 GMT</lastBuildDate>
 <item>
   <title>Erase Disk with hdparm</title>
   <dc:creator>John Coleman</dc:creator>
@@ -109,41 +62,6 @@
  ]]></description>
   <category>HowTo</category>
   <guid>https://colemanjp.github.io/posts/hdparm_erase/index.html</guid>
-  <pubDate>Sun, 19 Feb 2023 05:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Vi Cheatsheet</title>
-  <dc:creator>John Coleman</dc:creator>
-  <link>https://colemanjp.github.io/posts/vi/index.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<p>Miscellaneous vi</p>
-<section id="run-command-on-all-lines" class="level1">
-<h1>Run Command On All Lines</h1>
-<p><code>:g/str/cmd</code></p>
-<section id="delete-blank-lines" class="level2">
-<h2 class="anchored" data-anchor-id="delete-blank-lines">Delete Blank Lines</h2>
-<p><code>:g/^$d/</code></p>
-</section>
-</section>
-<section id="replace-newlines-with-semicolons" class="level1">
-<h1>Replace Newlines With Semicolons</h1>
-<p><code>:% s/\n/;/</code></p>
-</section>
-<section id="lowercase-all-lines-using-tr" class="level1">
-<h1>Lowercase All Lines Using tr</h1>
-<p><code>:%!tr A-Z a-z</code></p>
-
-
-</section>
-
- ]]></description>
-  <category>HowTo</category>
-  <category>Cheatsheet</category>
-  <guid>https://colemanjp.github.io/posts/vi/index.html</guid>
   <pubDate>Sun, 19 Feb 2023 05:00:00 GMT</pubDate>
 </item>
 <item>

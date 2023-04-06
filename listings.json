@@ -2,9 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/ctrl_nocaps/index.html",
       "/posts/hdparm_erase/index.html",
-      "/posts/vi/index.html",
       "/posts/tmux_cron/index.html",
       "/posts/xxe_vulnerability_in_bluecat_drp/index.html",
       "/posts/signal_on_tails/index.html",
