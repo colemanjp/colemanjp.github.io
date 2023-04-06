@@ -1,0 +1,27 @@
+---
+title: "Map Caps Lock to Ctrl"
+author: "John Coleman"
+date: "2023-04-05"
+categories: [HowTo]
+#image: "image.jpg"
+---
+
+# Map Caps Lock to Ctrl
+
+## Gnome Using Tweak Tool
+
+![](tweak.png){width=800}
+
+## Gnome Using dconf-editor
+
+![](dconf.png){width=800}
+
+## Xfce Using Settings Manager
+
+Settings Manager -> Session and Startup -> Application Autostart
+
+`setxkbmap -option 'ctrl:nocaps'`
+
+creates an entry in $HOME/.config/autostart
+
+![](xfce.png){width=800}
