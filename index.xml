@@ -10,7 +10,44 @@
 <atom:link href="https://colemanjp.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.2.313</generator>
-<lastBuildDate>Sun, 19 Feb 2023 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 05 Apr 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Map Caps Lock to Ctrl</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="map-caps-lock-to-ctrl" class="level1">
+<h1>Map Caps Lock to Ctrl</h1>
+<p>Map caps lock to ctrl in software</p>
+<section id="gnome-using-tweak-tool" class="level2">
+<h2 class="anchored" data-anchor-id="gnome-using-tweak-tool">Gnome Using Tweak Tool</h2>
+<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/tweak.png" class="img-fluid" width="800"></p>
+</section>
+<section id="gnome-using-dconf-editor" class="level2">
+<h2 class="anchored" data-anchor-id="gnome-using-dconf-editor">Gnome Using dconf-editor</h2>
+<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/dconf.png" class="img-fluid" width="800"></p>
+</section>
+<section id="xfce-using-settings-manager" class="level2">
+<h2 class="anchored" data-anchor-id="xfce-using-settings-manager">Xfce Using Settings Manager</h2>
+<p>Settings Manager -&gt; Session and Startup -&gt; Application Autostart</p>
+<p><code>setxkbmap -option 'ctrl:nocaps'</code></p>
+<p>creates an entry in $HOME/.config/autostart</p>
+<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/xfce.png" class="img-fluid" width="800"></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>HowTo</category>
+  <guid>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</guid>
+  <pubDate>Wed, 05 Apr 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://colemanjp.github.io/posts/ctrl_nocaps/tweak.png" medium="image" type="image/png" height="101" width="144"/>
+</item>
 <item>
   <title>Erase Disk with hdparm</title>
   <dc:creator>John Coleman</dc:creator>

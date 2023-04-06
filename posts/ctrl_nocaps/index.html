@@ -144,10 +144,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#map-caps-lock-to-ctrl" id="toc-map-caps-lock-to-ctrl" class="nav-link active" data-scroll-target="#map-caps-lock-to-ctrl">Map Caps Lock to Ctrl</a>
   <ul class="collapse">
-  <li><a href="#gnome-tweak-tool" id="toc-gnome-tweak-tool" class="nav-link" data-scroll-target="#gnome-tweak-tool">Gnome Tweak Tool</a></li>
-  <li><a href="#gnome-dconf-editor" id="toc-gnome-dconf-editor" class="nav-link" data-scroll-target="#gnome-dconf-editor">Gnome dconf-editor</a></li>
-  <li><a href="#xfce" id="toc-xfce" class="nav-link" data-scroll-target="#xfce">Xfce</a></li>
-  <li><a href="#pass-keyboard-mapping-to-rdp-in-remmina" id="toc-pass-keyboard-mapping-to-rdp-in-remmina" class="nav-link" data-scroll-target="#pass-keyboard-mapping-to-rdp-in-remmina">Pass Keyboard Mapping to RDP in Remmina</a></li>
+  <li><a href="#gnome-using-tweak-tool" id="toc-gnome-using-tweak-tool" class="nav-link" data-scroll-target="#gnome-using-tweak-tool">Gnome Using Tweak Tool</a></li>
+  <li><a href="#gnome-using-dconf-editor" id="toc-gnome-using-dconf-editor" class="nav-link" data-scroll-target="#gnome-using-dconf-editor">Gnome Using dconf-editor</a></li>
+  <li><a href="#xfce-using-settings-manager" id="toc-xfce-using-settings-manager" class="nav-link" data-scroll-target="#xfce-using-settings-manager">Xfce Using Settings Manager</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -160,31 +159,21 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="map-caps-lock-to-ctrl" class="level1">
 <h1>Map Caps Lock to Ctrl</h1>
-<section id="gnome-tweak-tool" class="level2">
-<h2 class="anchored" data-anchor-id="gnome-tweak-tool">Gnome Tweak Tool</h2>
+<p>Map caps lock to ctrl in software</p>
+<section id="gnome-using-tweak-tool" class="level2">
+<h2 class="anchored" data-anchor-id="gnome-using-tweak-tool">Gnome Using Tweak Tool</h2>
 <p><img src="tweak.png" class="img-fluid" width="800"></p>
 </section>
-<section id="gnome-dconf-editor" class="level2">
-<h2 class="anchored" data-anchor-id="gnome-dconf-editor">Gnome dconf-editor</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="dconf.png" class="img-fluid figure-img" width="800"></p>
-<p></p><figcaption class="figure-caption">dconf-editor</figcaption><p></p>
-</figure>
-</div>
+<section id="gnome-using-dconf-editor" class="level2">
+<h2 class="anchored" data-anchor-id="gnome-using-dconf-editor">Gnome Using dconf-editor</h2>
+<p><img src="dconf.png" class="img-fluid" width="800"></p>
 </section>
-<section id="xfce" class="level2">
-<h2 class="anchored" data-anchor-id="xfce">Xfce</h2>
-<p>Foo foo foo</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="xfce.png" class="img-fluid figure-img" width="800"></p>
-<p></p><figcaption class="figure-caption">xfce</figcaption><p></p>
-</figure>
-</div>
-</section>
-<section id="pass-keyboard-mapping-to-rdp-in-remmina" class="level2">
-<h2 class="anchored" data-anchor-id="pass-keyboard-mapping-to-rdp-in-remmina">Pass Keyboard Mapping to RDP in Remmina</h2>
+<section id="xfce-using-settings-manager" class="level2">
+<h2 class="anchored" data-anchor-id="xfce-using-settings-manager">Xfce Using Settings Manager</h2>
+<p>Settings Manager -&gt; Session and Startup -&gt; Application Autostart</p>
+<p><code>setxkbmap -option 'ctrl:nocaps'</code></p>
+<p>creates an entry in $HOME/.config/autostart</p>
+<p><img src="xfce.png" class="img-fluid" width="800"></p>
 
 
 </section>
