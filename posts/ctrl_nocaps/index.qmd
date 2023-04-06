@@ -8,6 +8,8 @@ categories: [HowTo]
 
 # Map Caps Lock to Ctrl
 
+Map caps lock to ctrl in software
+
 ## Gnome Using Tweak Tool
 
 ![](tweak.png){width=800}
