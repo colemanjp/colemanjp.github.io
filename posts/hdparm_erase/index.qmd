@@ -6,10 +6,9 @@ categories: [HowTo]
 #image: "image.jpg"
 ---
 
----
 # Erase Disk with hdparm
 
-Disk in example is /dev/sdc
+Erase disk /dev/sdc
 
 ## Confirm not Frozen. Check if Enhanced Erase is Supported. 
 
