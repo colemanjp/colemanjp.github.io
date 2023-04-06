@@ -91,6 +91,11 @@ ul.task-list li input[type="checkbox"] {
 </i> 
  <span class="menu-text"></span></a>
   </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
           </div> <!-- /navcollapse -->
@@ -154,10 +159,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<hr>
 <section id="erase-disk-with-hdparm" class="level1">
 <h1>Erase Disk with hdparm</h1>
-<p>Disk in example is /dev/sdc</p>
+<p>Erase disk /dev/sdc</p>
 <section id="confirm-not-frozen.-check-if-enhanced-erase-is-supported." class="level2">
 <h2 class="anchored" data-anchor-id="confirm-not-frozen.-check-if-enhanced-erase-is-supported.">Confirm not Frozen. Check if Enhanced Erase is Supported.</h2>
 <p><code>/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'</code></p>

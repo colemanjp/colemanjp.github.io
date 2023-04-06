@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="John Coleman">
-<meta name="dcterms.date" content="2023-01-13">
+<meta name="dcterms.date" content="2023-02-19">
 
-<title>Home - CVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)</title>
+<title>Home - Vi Cheatsheet</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -106,9 +106,10 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">CVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)</h1>
+      <h1 class="title">Vi Cheatsheet</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">CVE</div>
+                <div class="quarto-category">HowTo</div>
+                <div class="quarto-category">Cheatsheet</div>
               </div>
                   </div>
   </div>
@@ -126,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 13, 2023</p>
+        <p class="date">February 19, 2023</p>
       </div>
     </div>
     
@@ -138,7 +139,18 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#run-command-on-all-lines" id="toc-run-command-on-all-lines" class="nav-link active" data-scroll-target="#run-command-on-all-lines">Run Command On All Lines</a>
+  <ul class="collapse">
+  <li><a href="#delete-blank-lines" id="toc-delete-blank-lines" class="nav-link" data-scroll-target="#delete-blank-lines">Delete Blank Lines</a></li>
+  </ul></li>
+  <li><a href="#replace-newlines-with-semicolons" id="toc-replace-newlines-with-semicolons" class="nav-link" data-scroll-target="#replace-newlines-with-semicolons">Replace Newlines With Semicolons</a></li>
+  <li><a href="#lowercase-all-lines-using-tr" id="toc-lowercase-all-lines-using-tr" class="nav-link" data-scroll-target="#lowercase-all-lines-using-tr">Lowercase All Lines Using tr</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -146,9 +158,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://github.com/colemanjp/XXE-Vulnerability-in-Bluecat-Device-Registration-Portal-DRP" class="uri">https://github.com/colemanjp/XXE-Vulnerability-in-Bluecat-Device-Registration-Portal-DRP</a></p>
+<p>Miscellaneous vi</p>
+<section id="run-command-on-all-lines" class="level1">
+<h1>Run Command On All Lines</h1>
+<p><code>:g/str/cmd</code></p>
+<section id="delete-blank-lines" class="level2">
+<h2 class="anchored" data-anchor-id="delete-blank-lines">Delete Blank Lines</h2>
+<p><code>:g/^$d/</code></p>
+</section>
+</section>
+<section id="replace-newlines-with-semicolons" class="level1">
+<h1>Replace Newlines With Semicolons</h1>
+<p><code>:% s/\n/;/</code></p>
+</section>
+<section id="lowercase-all-lines-using-tr" class="level1">
+<h1>Lowercase All Lines Using tr</h1>
+<p><code>:%!tr A-Z a-z</code></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

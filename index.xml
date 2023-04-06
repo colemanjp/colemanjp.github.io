@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Home</title>
+<link>https://colemanjp.github.io/index.html</link>
+<atom:link href="https://colemanjp.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.2.313</generator>
+<lastBuildDate>Wed, 05 Apr 2023 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Map Caps Lock to Ctrl</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="map-caps-lock-to-ctrl" class="level1">
+<h1>Map Caps Lock to Ctrl</h1>
+<section id="gnome-tweak-tool" class="level2">
+<h2 class="anchored" data-anchor-id="gnome-tweak-tool">Gnome Tweak Tool</h2>
+<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/tweak.png" class="img-fluid" width="800"></p>
+</section>
+<section id="gnome-dconf-editor" class="level2">
+<h2 class="anchored" data-anchor-id="gnome-dconf-editor">Gnome dconf-editor</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/dconf.png" class="img-fluid figure-img" width="800"></p>
+<p></p><figcaption class="figure-caption">dconf-editor</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="xfce" class="level2">
+<h2 class="anchored" data-anchor-id="xfce">Xfce</h2>
+<p>Foo foo foo</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://colemanjp.github.io/posts/ctrl_nocaps/xfce.png" class="img-fluid figure-img" width="800"></p>
+<p></p><figcaption class="figure-caption">xfce</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="pass-keyboard-mapping-to-rdp-in-remmina" class="level2">
+<h2 class="anchored" data-anchor-id="pass-keyboard-mapping-to-rdp-in-remmina">Pass Keyboard Mapping to RDP in Remmina</h2>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>HowTo</category>
+  <guid>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</guid>
+  <pubDate>Wed, 05 Apr 2023 04:00:00 GMT</pubDate>
+  <media:content url="https://colemanjp.github.io/posts/ctrl_nocaps/tweak.png" medium="image" type="image/png" height="101" width="144"/>
+</item>
+<item>
+  <title>Erase Disk with hdparm</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/hdparm_erase/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<section id="erase-disk-with-hdparm" class="level1">
+<h1>Erase Disk with hdparm</h1>
+<p>Erase disk /dev/sdc</p>
+<section id="confirm-not-frozen.-check-if-enhanced-erase-is-supported." class="level2">
+<h2 class="anchored" data-anchor-id="confirm-not-frozen.-check-if-enhanced-erase-is-supported.">Confirm not Frozen. Check if Enhanced Erase is Supported.</h2>
+<p><code>/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'</code></p>
+<pre><code>      not   frozen
+            supported: enhanced erase
+        2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT.</code></pre>
+</section>
+<section id="set-password" class="level2">
+<h2 class="anchored" data-anchor-id="set-password">Set Password</h2>
+<p>Will be reset to null on erase</p>
+<p><code>/usr/sbin/hdparm --user-master u --security-set-pass p /dev/sdc</code></p>
+<pre><code>      security_password: "p"
+      
+      /dev/sdc:
+       Issuing SECURITY_SET_PASS command, password="p", user=user, mode=high</code></pre>
+</section>
+<section id="confirm-password-set-security-level-high" class="level2">
+<h2 class="anchored" data-anchor-id="confirm-password-set-security-level-high">Confirm Password Set (Security level high)</h2>
+<p><code>/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'</code></p>
+<pre><code>        not frozen
+            supported: enhanced erase
+        Security level high
+        2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT.</code></pre>
+</section>
+<section id="erase-drive" class="level2">
+<h2 class="anchored" data-anchor-id="erase-drive">Erase Drive</h2>
+<p><code>/usr/sbin/hdparm --user-master u --security-erase-enhanced p /dev/sdc</code></p>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<p><a href="https://ata.wiki.kernel.org/index.php/ATA_Secure_Erase">ATA Secure Erase</a></p>
+
+
+</section>
+</section>
+
+ ]]></description>
+  <category>HowTo</category>
+  <guid>https://colemanjp.github.io/posts/hdparm_erase/index.html</guid>
+  <pubDate>Sun, 19 Feb 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Vi Cheatsheet</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/vi/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Miscellaneous vi</p>
+<section id="run-command-on-all-lines" class="level1">
+<h1>Run Command On All Lines</h1>
+<p><code>:g/str/cmd</code></p>
+<section id="delete-blank-lines" class="level2">
+<h2 class="anchored" data-anchor-id="delete-blank-lines">Delete Blank Lines</h2>
+<p><code>:g/^$d/</code></p>
+</section>
+</section>
+<section id="replace-newlines-with-semicolons" class="level1">
+<h1>Replace Newlines With Semicolons</h1>
+<p><code>:% s/\n/;/</code></p>
+</section>
+<section id="lowercase-all-lines-using-tr" class="level1">
+<h1>Lowercase All Lines Using tr</h1>
+<p><code>:%!tr A-Z a-z</code></p>
+
+
+</section>
+
+ ]]></description>
+  <category>HowTo</category>
+  <category>Cheatsheet</category>
+  <guid>https://colemanjp.github.io/posts/vi/index.html</guid>
+  <pubDate>Sun, 19 Feb 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Run Command in Tmux from Cron</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/tmux_cron/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<hr>
+<p>Application run from cron needs a tty</p>
+<p>One way to accomplish that is to run it inside tmux.</p>
+<section id="wrapper-script-manages-tmux-and-launches-command" class="level1">
+<h1>Wrapper Script Manages tmux and Launches Command</h1>
+<p>Run the command <code>script01.sh</code> inside tmux. Create a separate tmux session for <code>script01.sh</code> to make this easy.</p>
+<pre><code>#!/bin/sh
+
+# Script that is run in tmux
+SCRIPT="${HOME}/script01.sh"
+
+# Name the tmux session
+SESSION=script01
+
+# If session doesn't exist, create it
+if /usr/bin/tmux has -t "${SESSION}" 2&gt;/dev/null
+then
+        :
+else
+        /usr/bin/tmux new-session -d -s "${SESSION}"
+fi
+
+# Run SCRIPT in the tmux SESSION
+/usr/bin/tmux send-keys -t "${SESSION}":0 "${SCRIPT}" ENTER</code></pre>
+</section>
+<section id="launch-the-wrapper-script-from-cron" class="level1">
+<h1>Launch the Wrapper Script from cron</h1>
+<p><code>15 10 * * * "${HOME}"/wrapper.sh &gt; /dev/null</code></p>
+
+
+</section>
+
+ ]]></description>
+  <category>HowTo</category>
+  <guid>https://colemanjp.github.io/posts/tmux_cron/index.html</guid>
+  <pubDate>Thu, 02 Feb 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>CVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/xxe_vulnerability_in_bluecat_drp/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://github.com/colemanjp/XXE-Vulnerability-in-Bluecat-Device-Registration-Portal-DRP" class="uri">https://github.com/colemanjp/XXE-Vulnerability-in-Bluecat-Device-Registration-Portal-DRP</a></p>
+
+
+
+ ]]></description>
+  <category>CVE</category>
+  <guid>https://colemanjp.github.io/posts/xxe_vulnerability_in_bluecat_drp/index.html</guid>
+  <pubDate>Fri, 13 Jan 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Install Signal on Tails</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/signal_on_tails/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Install and configure Signal with persistence on Tails</p>
+<section id="preparation" class="level1">
+<h1>Preparation</h1>
+<p>Boot off Tails USB</p>
+<p>Enable admin password</p>
+<p>Unlock persistent storage</p>
+<p>Start</p>
+<p>Start Tor Connection</p>
+<p>Applications &gt; Tails &gt; Persistent Storage &gt; Network Connections &gt; On</p>
+<p>Applications &gt; Tails &gt; Persistent Storage &gt; Additional Software &gt; On</p>
+<p>Applications &gt; Tails &gt; Persistent Storage &gt; Dotfiles &gt; On</p>
+</section>
+<section id="install-signal" class="level1">
+<h1>Install Signal</h1>
+<p>Open Terminal application</p>
+<section id="create-directories-for-persistence" class="level2">
+<h2 class="anchored" data-anchor-id="create-directories-for-persistence">Create Directories for Persistence</h2>
+<p><code>sudo mkdir -m 755 /live/persistence/TailsData_unlocked/sources.list.d</code></p>
+<p><code>sudo mkdir -m 755 /live/persistence/TailsData_unlocked/keyrings</code></p>
+<p><code>sudo mkdir -m 755 /live/persistence/TailsData_unlocked/Signal</code></p>
+<p><code>sudo chown amnesia:amnesia /live/persistence/TailsData_unlocked/Signal</code></p>
+<p><code>sudo mkdir -m755 -p /live/persistence/TailsData_unlocked/dotfiles/.local/share/applications</code></p>
+<p><code>cd /live/persistence/TailsData_unlocked/dotfiles/</code></p>
+<p><code>sudo chown -Rh amnesia:amnesia .local</code></p>
+</section>
+<section id="add-persistence-directories-to-persistence.conf" class="level2">
+<h2 class="anchored" data-anchor-id="add-persistence-directories-to-persistence.conf">Add Persistence Directories to Persistence.conf</h2>
+<pre><code>sudo bash -c "echo '/etc/apt/sources.list.d  source=sources.list.d,link' &gt;&gt; /live/persistence/TailsData_unlocked/persistence.conf"</code></pre>
+<pre><code>sudo bash -c "echo '/usr/share/keyrings/persistent source=keyrings' &gt;&gt; /live/persistence/TailsData_unlocked/persistence.conf"</code></pre>
+<pre><code>sudo bash -c "echo '/home/amnesia/.config/Signal source=Signal' &gt;&gt; /live/persistence/TailsData_unlocked/persistence.conf"</code></pre>
+</section>
+<section id="download-and-install-signal-gpg-keyring" class="level2">
+<h2 class="anchored" data-anchor-id="download-and-install-signal-gpg-keyring">Download and Install Signal GPG Keyring</h2>
+<p><code>cd $HOME</code></p>
+<p><code>torify wget https://updates.signal.org/desktop/apt/keys.asc -O- | gpg --dearmor &gt; signal-desktop-keyring.gpg</code></p>
+<p><code>sudo cp signal-desktop-keyring.gpg /live/persistence/TailsData_unlocked/keyrings</code></p>
+<pre><code>sudo bash -c "echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/persistent/signal-desktop-keyring.gpg] tor+https://updates.signal.org/desktop/apt xenial main' &gt; /live/persistence/TailsData_unlocked/sources.list.d/signal.list"</code></pre>
+</section>
+<section id="install-custom-signal-startup-script" class="level2">
+<h2 class="anchored" data-anchor-id="install-custom-signal-startup-script">Install Custom Signal Startup Script</h2>
+<p>This script sets environment variables needed run Signal on Tails</p>
+<pre><code>cat &gt;$HOME/Persistent/signal.sh&lt;&lt;EOF
+#!/bin/sh
+export HTTP_PROXY=socks://127.0.0.1:9050
+export HTTPS_PROXY=socks://127.0.0.1:9050
+signal-desktop
+EOF</code></pre>
+<p><code>chmod 755 $HOME/Persistent/signal.sh</code></p>
+</section>
+<section id="create-desktop-script-for-signal" class="level2">
+<h2 class="anchored" data-anchor-id="create-desktop-script-for-signal">Create Desktop Script for Signal</h2>
+<p>This creates an icon for the custom signal.sh script. When you run Signal, pick the generic diamond Signal icon rather than the built in one.</p>
+<pre><code>cat &gt;/live/persistence/TailsData_unlocked/dotfiles/.local/share/applications/Signal.desktop&lt;&lt;EOF
+[Desktop Entry]
+Name=Signal
+GenericName=Signal Desktop Messenger
+Exec=/home/amnesia/Persistent/signal.sh
+Terminal=false
+Type=Application
+EOF</code></pre>
+</section>
+<section id="reboot-and-install-signal-desktop-package" class="level2">
+<h2 class="anchored" data-anchor-id="reboot-and-install-signal-desktop-package">Reboot and Install signal-desktop Package</h2>
+<p><code>sudo reboot</code></p>
+<p><code>sudo apt get update</code></p>
+<p><code>sudo apt install signal-desktop</code></p>
+<p>Click “Install Every Time” when prompted. This creates an entry in /live/persistence/TailsData_unlocked/live-additional-software.conf</p>
+</section>
+</section>
+<section id="reference" class="level1">
+<h1>Reference</h1>
+<p><a href="https://signal.org/en/download/linux/">Signal download</a></p>
+<p><a href="https://tails.boum.org/doc/first_steps/additional_software/#index6h1">Add new repos to Tails</a></p>
+<p><a href="https://gitlab.tails.boum.org/tails/tails/-/issues/17510">Apt doesn’t allow symlinks for signing keys</a></p>
+
+
+</section>
+
+ ]]></description>
+  <category>HowTo</category>
+  <guid>https://colemanjp.github.io/posts/signal_on_tails/index.html</guid>
+  <pubDate>Mon, 09 Jan 2023 05:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>CVE-2021-3374 Rstudio Shiny-Server Directory Traversal and Source Code Leak</title>
+  <dc:creator>John Coleman</dc:creator>
+  <link>https://colemanjp.github.io/posts/rstudio_shiny_server_directory_traversal/index.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://github.com/colemanjp/rstudio-shiny-server-directory-traversal-source-code-leak" class="uri">https://github.com/colemanjp/rstudio-shiny-server-directory-traversal-source-code-leak</a></p>
+
+
+
+ ]]></description>
+  <category>CVE</category>
+  <guid>https://colemanjp.github.io/posts/rstudio_shiny_server_directory_traversal/index.html</guid>
+  <pubDate>Sat, 30 Jan 2021 05:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

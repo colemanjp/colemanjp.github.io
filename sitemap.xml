@@ -2,26 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://colemanjp.github.io/posts/rstudio_shiny_server_directory_traversal/index.html</loc>
-    <lastmod>2023-02-19T20:03:49.833Z</lastmod>
+    <lastmod>2023-04-06T13:27:47.182Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/signal_on_tails/index.html</loc>
-    <lastmod>2023-02-19T20:03:50.100Z</lastmod>
+    <lastmod>2023-04-06T13:27:47.461Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/tmux_cron/index.html</loc>
-    <lastmod>2023-02-19T20:03:50.350Z</lastmod>
+    <lastmod>2023-04-06T13:27:47.712Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/xxe_vulnerability_in_bluecat_drp/index.html</loc>
-    <lastmod>2023-02-19T20:03:50.591Z</lastmod>
+    <lastmod>2023-04-06T13:27:47.952Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/posts/hdparm_erase/index.html</loc>
-    <lastmod>2023-02-19T20:03:50.832Z</lastmod>
+    <lastmod>2023-04-06T13:27:48.193Z</lastmod>
+  </url>
+  <url>
+    <loc>https://colemanjp.github.io/posts/vi/index.html</loc>
+    <lastmod>2023-04-06T13:27:48.420Z</lastmod>
+  </url>
+  <url>
+    <loc>https://colemanjp.github.io/posts/ctrl_nocaps/index.html</loc>
+    <lastmod>2023-04-06T13:27:48.660Z</lastmod>
   </url>
   <url>
     <loc>https://colemanjp.github.io/index.html</loc>
-    <lastmod>2023-02-19T20:03:51.116Z</lastmod>
+    <lastmod>2023-04-06T13:27:49.019Z</lastmod>
   </url>
 </urlset>

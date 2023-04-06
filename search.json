@@ -70,45 +70,38 @@
     "text": "https://github.com/colemanjp/XXE-Vulnerability-in-Bluecat-Device-Registration-Portal-DRP"
   },
   {
-    "objectID": "posts/hdparm_erase/index.html#confirm-not-frozen.-check-if-enhanced-erase-is-supported.",
-    "href": "posts/hdparm_erase/index.html#confirm-not-frozen.-check-if-enhanced-erase-is-supported.",
+    "objectID": "posts/hdparm_erase/index.html",
+    "href": "posts/hdparm_erase/index.html",
     "title": "Erase Disk with hdparm",
-    "section": "Confirm not Frozen. Check if Enhanced Erase is Supported.",
-    "text": "Confirm not Frozen. Check if Enhanced Erase is Supported.\n/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'\n      not   frozen\n            supported: enhanced erase\n        2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT."
+    "section": "",
+    "text": "Erase disk /dev/sdc\n\n\n/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'\n      not   frozen\n            supported: enhanced erase\n        2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT.\n\n\n\nWill be reset to null on erase\n/usr/sbin/hdparm --user-master u --security-set-pass p /dev/sdc\n      security_password: \"p\"\n      \n      /dev/sdc:\n       Issuing SECURITY_SET_PASS command, password=\"p\", user=user, mode=high\n\n\n\n/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'\n        not frozen\n            supported: enhanced erase\n        Security level high\n        2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT.\n\n\n\n/usr/sbin/hdparm --user-master u --security-erase-enhanced p /dev/sdc\n\n\n\nATA Secure Erase"
   },
   {
-    "objectID": "posts/hdparm_erase/index.html#set-password",
-    "href": "posts/hdparm_erase/index.html#set-password",
-    "title": "Erase Disk with hdparm",
-    "section": "Set Password",
-    "text": "Set Password\nWill be reset to null on erase\n/usr/sbin/hdparm --user-master u --security-set-pass p /dev/sdc\n      security_password: \"p\"\n      \n      /dev/sdc:\n       Issuing SECURITY_SET_PASS command, password=\"p\", user=user, mode=high"
+    "objectID": "posts/vi/index.html",
+    "href": "posts/vi/index.html",
+    "title": "Vi Cheatsheet",
+    "section": "",
+    "text": "Miscellaneous vi"
   },
   {
-    "objectID": "posts/hdparm_erase/index.html#confirm-password-set-security-level-high",
-    "href": "posts/hdparm_erase/index.html#confirm-password-set-security-level-high",
-    "title": "Erase Disk with hdparm",
-    "section": "Confirm Password Set (Security level high)",
-    "text": "Confirm Password Set (Security level high)\n/usr/sbin/hdparm -I /dev/sdc | egrep 'frozen|erase|ERASE|Security level'\n        not frozen\n            supported: enhanced erase\n        Security level high\n        2min for SECURITY ERASE UNIT. 2min for ENHANCED SECURITY ERASE UNIT."
+    "objectID": "posts/vi/index.html#delete-blank-lines",
+    "href": "posts/vi/index.html#delete-blank-lines",
+    "title": "Vi Cheatsheet",
+    "section": "Delete Blank Lines",
+    "text": "Delete Blank Lines\n:g/^$d/"
   },
   {
-    "objectID": "posts/hdparm_erase/index.html#erase-drive",
-    "href": "posts/hdparm_erase/index.html#erase-drive",
-    "title": "Erase Disk with hdparm",
-    "section": "Erase Drive",
-    "text": "Erase Drive\n/usr/sbin/hdparm --user-master u --security-erase-enhanced p /dev/sdc"
-  },
-  {
-    "objectID": "posts/hdparm_erase/index.html#reference",
-    "href": "posts/hdparm_erase/index.html#reference",
-    "title": "Erase Disk with hdparm",
-    "section": "Reference",
-    "text": "Reference\nATA Secure Erase"
+    "objectID": "posts/ctrl_nocaps/index.html",
+    "href": "posts/ctrl_nocaps/index.html",
+    "title": "Map Caps Lock to Ctrl",
+    "section": "",
+    "text": "dconf-editor\n\n\n\n\n\nFoo foo foo\n\n\n\nxfce"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Home",
     "section": "",
-    "text": "Erase Disk with hdparm\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nFeb 19, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nRun Command in Tmux from Cron\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nFeb 2, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nCVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)\n\n\n\n\n\n\n\nCVE\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nInstall Signal on Tails\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nJan 9, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\nCVE-2021-3374 Rstudio Shiny-Server Directory Traversal and Source Code Leak\n\n\n\n\n\n\n\nCVE\n\n\n\n\n\n\n\n\n\n\n\nJan 30, 2021\n\n\nJohn Coleman\n\n\n\n\n\n\nNo matching items"
+    "text": "Map Caps Lock to Ctrl\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nApr 5, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nErase Disk with hdparm\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nFeb 19, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVi Cheatsheet\n\n\n\n\n\n\n\nHowTo\n\n\nCheatsheet\n\n\n\n\n\n\n\n\n\n\n\nFeb 19, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRun Command in Tmux from Cron\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nFeb 2, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCVE-2023-23595 XXE Vulnerability in Bluecat Device Registration Portal (DRP)\n\n\n\n\n\n\n\nCVE\n\n\n\n\n\n\n\n\n\n\n\nJan 13, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInstall Signal on Tails\n\n\n\n\n\n\n\nHowTo\n\n\n\n\n\n\n\n\n\n\n\nJan 9, 2023\n\n\nJohn Coleman\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCVE-2021-3374 Rstudio Shiny-Server Directory Traversal and Source Code Leak\n\n\n\n\n\n\n\nCVE\n\n\n\n\n\n\n\n\n\n\n\nJan 30, 2021\n\n\nJohn Coleman\n\n\n\n\n\n\nNo matching items"
   }
 ]
