@@ -8,26 +8,32 @@ tags:
 
 # Windows Packaged Software
 
+- calibre
 - chrome
 - keepassxc 
 - dropbox (from MS store)
 - libreoffice
-- zotero
+- liquidtext (from MS store)
+- neovim
 - usbipd-win (so WSL can read USB storage)
+- vlc (from MS store)
+- zotero
 
 # WSL 
+
+`wsl --update`
 
 `wsl --install kali-linux`
 
 ## WSL Kali Packaged Software
 - kali-desktop-core (enables graphical applications)
-- libfuse2t64 (needed for non deb veracrypt)
 - neovim
 - 7zip
+- usbutils
+
+`apt install -y kali-desktop-core neovim 7zip usbutils`
 
 ## WSL Kali Non Packaged Software
 ### VeraCrypt
 
 `apt install ./veracrypt-1.26.20-Debian-12-amd64.deb`
-
-veracrypt-1.26.20-setup-gui-x64 also works if you install libfuse2t64 first.
