@@ -1,7 +1,7 @@
 ---
 title: "Windows Minibook"
 author: "John Coleman"
-date: "2025-03-30"
+date: "2025-09-07"
 tags: 
      - windows
      - WSL
@@ -11,6 +11,7 @@ tags:
 
 # Windows Packaged Software
 
+- anki
 - anyconnect vpn
 - calibre
 - chrome
@@ -22,11 +23,13 @@ tags:
 - ledger live desktop
 - libreoffice
 - liquidtext (from MS store)
-- neovim
 - openvpn
 - rawtherapee
 - spotify (from MS store)
+- standard notes
+- syncthing
 - usbipd-win (so WSL can read USB storage)
+- vivaldi
 - vlc (from MS store)
 - zotero
 
@@ -57,8 +60,12 @@ tags:
 
 `apt install ./veracrypt-1.26.20-Debian-12-amd64.deb`
 
-### Nvim kickstart
+### Install stow dotfiles
 
-`git clone git@github.com:colemanjp/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim`
+`git clone git@github.com:colemanjp/stow-dotfiles.git "${HOME}/.dotfiles`
 
+### Neovim from App image
 
+Packaged version in Kali doesn't support nvim-orgmode
+
+`curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage`

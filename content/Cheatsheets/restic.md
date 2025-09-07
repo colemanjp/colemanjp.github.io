@@ -1,7 +1,7 @@
 ---
 title: "Restic Cheatsheet"
 author: "John Coleman"
-date: "2025-01-17"
+date: "2025-09-07"
 tags: 
      - cheatsheet
 ---
@@ -29,5 +29,12 @@ tags:
 ```
 #!/bin/sh 
 export RESTIC_PASSWORD=YOURPASSWORDHERE
-restic -r /mnt/backups --verbose backup ""$HOME" --exclude-file ""$HOME"/.restic/exclude.txt
+restic -r /path/mybackups --verbose backup ""$HOME" --exclude-file ""$HOME"/.restic/exclude.txt
 ```
+# Simple backup script using secret tool
+```
+#!/bin/sh 
+restic -r /path/mybackups --verbose backup ""$HOME" --exclude-file ""$HOME"/.restic/exclude.txt \
+ --password-command="secret-tool lookup key mykeyname"
+```
+

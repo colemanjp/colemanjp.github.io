@@ -18,9 +18,6 @@ tags:
 ## Clear agent
 
 
-
 ## Neovim without swap 
 
 `nvim -n file.txt`
-
-
