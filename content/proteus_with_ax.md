@@ -4,6 +4,7 @@ author: "John Coleman"
 date: "2025-01-15"
 tags: 
      - howto
+     - docker
 ---
 
 The Project Discovery [proteus](https://github.com/pry0cc/proteus) automation tool uses [axiom](https://github.com/pry0cc/axiom). I'm not sure if proteus is still maintained, but I want to continue using it for automation with [ax](https://github.com/attacksurge/ax), which replaced axiom. Fortunately, it is relatively simple to port proteus to use ax. 

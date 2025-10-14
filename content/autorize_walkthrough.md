@@ -6,6 +6,7 @@ draft: false
 tags: 
      - walkthrough
      - burp
+     - docker
 ---
 # Instructions 
 Black Hills Information Security: [Finding Access Control Vulnerabilities with Autorize](https://www.blackhillsinfosec.com/finding-access-control-vulnerabilities-with-autorize/)

@@ -7,7 +7,7 @@ tags:
      - forensics
 ---
 
-# Sumuri Paladin Forensic Carbon 8.05 Tool Crash with LUKS and LVM
+# Sumuri Paladin Forensic Carbon 8.05 Toolbox Crash with LUKS and LVM
 While trying to examine a Linux machine with encrypted LVMs in **Forensic Mode,** the Paladin Toolbox GUI crashes and won't restart, either from the GUI or /usr/bin/toolbox.
 
 Since **Forensic Mode** requires you to use Paladin Toolbox to mount read+write and prevents you from mounting storage read+write from the command line, you are stuck.
