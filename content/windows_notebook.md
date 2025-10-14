@@ -1,7 +1,7 @@
 ---
 title: "Windows Minibook"
 author: "John Coleman"
-date: "2025-09-07"
+date: "2025-10-14"
 tags: 
      - windows
      - WSL
@@ -13,6 +13,7 @@ tags:
 
 - anki
 - anyconnect vpn
+- apple devices (from MS store)
 - calibre
 - chrome
 - digikam
