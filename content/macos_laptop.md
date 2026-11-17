@@ -11,16 +11,16 @@ title: "MacOS Laptop"
 ---
 
 # Install Software from Packages (running list)
-Anki
-Dropbox
-FalconSensor
-Keepassxc
-MS Teams (MS download)
-MS Todo (App Store)
-Syncthing (https://syncthing.net/downloads/)
-Vivaldi
-Xmind
-Zettlr
+- Anki
+- Dropbox
+- FalconSensor
+- Keepassxc
+- MS Teams (MS download)
+- MS Todo (App Store)
+- Syncthing (https://syncthing.net/downloads/)
+- Vivaldi
+- Xmind
+- Zettlr
 
 # Install Software from Nix
 
