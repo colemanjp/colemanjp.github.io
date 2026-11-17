@@ -1,7 +1,7 @@
 ---
 title: "Windows Minibook"
 author: "John Coleman"
-date: "2025-10-14"
+date: "2026-10-26"
 tags: 
      - windows
      - WSL
@@ -29,9 +29,12 @@ tags:
 - spotify (from MS store)
 - standard notes
 - syncthing
+- tex live (Advanced -> Medium Scheme)
+- texstudio
 - usbipd-win (so WSL can read USB storage)
 - vivaldi
 - vlc (from MS store)
+- xmind (from MS store)
 - zotero
 
 # WSL
